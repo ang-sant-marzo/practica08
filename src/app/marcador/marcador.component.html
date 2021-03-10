@@ -1,0 +1,18 @@
+<div class="marcador">
+    <div class="logo">
+        <img [src]="locales.escudo">
+    </div>
+    <div class="puntos">
+        <span>{{puntosLocales}}</span>
+        <img src="assets/img/NBA_Logo.svg">
+        <span>{{puntosVisitantes}}</span>
+    </div>
+    <div class="logo">
+        <img [src]="visitantes.escudo">
+    </div>
+</div>
+<div class="jugadores">
+    <app-jugadores class="equipo" 
+                   [jugadores]="locales.jugadores" [equipo]="locales.nombre"></app-jugadores>
+    <app-jugadores class="equipo" [jugadores]="visitantes.jugadores" [equipo]="visitantes.nombre"></app-jugadores>
+</div>
