@@ -17,7 +17,11 @@ export class TopScoreComponent implements OnInit {
     this.jugadores = [...this.jugadoresLocales, ...this.jugadoresVisitantes];
   }
 
-  ngAfterViewChecked() {
+  ngAfterContentChecked() { // All credits to Alejandro!!
+    this.sortJugadores();
+  }
+
+  sortJugadores() {
     this.jugadores.sort((a: any, b: any) => {
       return (b.puntos - a.puntos);
     })
