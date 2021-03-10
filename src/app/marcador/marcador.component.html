@@ -13,6 +13,11 @@
 </div>
 <div class="jugadores">
     <app-jugadores class="equipo" 
-                   [jugadores]="locales.jugadores" [equipo]="locales.nombre"></app-jugadores>
-    <app-jugadores class="equipo" [jugadores]="visitantes.jugadores" [equipo]="visitantes.nombre"></app-jugadores>
+                   [jugadores]="locales.jugadores" 
+                   [equipo]="locales.nombre"
+                   (canasta)="getCanastaLocal($event)"></app-jugadores>
+    <app-jugadores class="equipo" 
+                   [jugadores]="visitantes.jugadores" 
+                   [equipo]="visitantes.nombre"
+                   (canasta)="getCanastaVisitante($event)"></app-jugadores>
 </div>
