@@ -21,3 +21,5 @@
                    [equipo]="visitantes.nombre"
                    (canasta)="getCanastaVisitante($event)"></app-jugadores>
 </div>
+<app-top-score [jugadoresLocales]="locales.jugadores"
+               [jugadoresVisitantes]="visitantes.jugadores"></app-top-score>
